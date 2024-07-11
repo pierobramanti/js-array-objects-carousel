@@ -24,7 +24,10 @@ const images = [
 
 
 const items = document.querySelector(".items")
+const prev = document.querySelector(".btn-top")
+const next = document.querySelector(".btn-bottom")
 
+// USO IL METODO FOREACH PER CICLARE GLI OGGETTI//
 images.forEach((el)=>{
     items.innerHTML += `             
         <div class="item relative active">

@@ -36,6 +36,35 @@
     text-align: end;
 }
 
+
+.btn-bottom, .btn-top {
+    right: 0;
+}
+
+.btn-top {
+    top: 20%;
+    margin: 10px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-bottom{
+    bottom:20%;
+    margin: 10px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+button i {
+    color: #fff;
+    font-size: 40px;
+}
+
 /* UTILITIES*/
 
 .relative{
@@ -46,6 +75,10 @@
     position: absolute;
 }
 
+.d-none {
+    display: none;
+}
+
 .size-20{
     font-size: 20px;
 }
@@ -53,3 +86,4 @@
 .color-white{
     color: white;
 }
+
