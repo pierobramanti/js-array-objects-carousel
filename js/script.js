@@ -21,3 +21,16 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+
+const items = document.querySelector(".items")
+
+images.forEach((el)=>{
+    items.innerHTML += `             
+        <div class="item relative active">
+            <img src="${el.image}" alt="image">
+            <div class="text absolute">
+                <h3 class="size-20 color-white">${el.title}</h3>
+                <p class="size-20 color-white">${el.text}</p>
+            </div>  `
+})
