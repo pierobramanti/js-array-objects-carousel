@@ -24,16 +24,23 @@ const images = [
 
 
 const items = document.querySelector(".items")
+const item= document.querySelectorAll(".item")
 const prev = document.querySelector(".btn-top")
 const next = document.querySelector(".btn-bottom")
+
+
+// varibile active //
+
+let active = 0;
 
 // USO IL METODO FOREACH PER CICLARE GLI OGGETTI//
 images.forEach((el)=>{
     items.innerHTML += `             
-        <div class="item relative active">
+        <div class="item relative">
             <img src="${el.image}" alt="image">
             <div class="text absolute">
                 <h3 class="size-20 color-white">${el.title}</h3>
                 <p class="size-20 color-white">${el.text}</p>
-            </div>  `
+            </div> 
+        <div> `
 })
