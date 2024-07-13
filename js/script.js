@@ -1,6 +1,6 @@
 const images = [
     {
-        image: 'img/01.webp',
+        image: 'img/01.webp',  
         title: 'Marvel\'s Spiderman Miles Morale',
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     }, {
@@ -33,10 +33,11 @@ const next = document.querySelector(".btn-bottom")
 
 let active = 0;
 
+
 // USO IL METODO FOREACH PER CICLARE GLI OGGETTI//
 images.forEach((el)=>{
     items.innerHTML += `             
-        <div class="item relative">
+        <div class="image item relative d-none">
             <img src="${el.image}" alt="image">
             <div class="text absolute">
                 <h3 class="size-20 color-white">${el.title}</h3>
@@ -44,3 +45,6 @@ images.forEach((el)=>{
             </div> 
         <div> `
 })
+
+// recupero il primo elemento con la classe image che ha anche la classe d-none per toglierli quest'ultima//
+document.querySelectorAll('.image')[active].classList.remove('d-none');
