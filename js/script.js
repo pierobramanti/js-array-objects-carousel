@@ -44,3 +44,15 @@ images.forEach((el, index) => {
 // recupero tutti gli elementi con la classe image
 let allImages = document.querySelectorAll('.image');
 
+// definisco il comportamento del tasto next
+next.addEventListener('click', function () {
+    allImages[active].classList.add('d-none');
+
+    active++;
+    if (active >= allImages.length) {
+        active = 0;
+    }
+
+    allImages[active].classList.remove('d-none'); 
+});
+
