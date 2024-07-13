@@ -32,7 +32,7 @@ let active = 0;
 // USO IL METODO FOREACH PER CICLARE GLI OGGETTI//
 images.forEach((el, index) => {
     items.innerHTML += `             
-        <div class="image item relative ${index === 0 ? '' : 'd-none'}">
+        <div class="image item  ${index === 0 ? '' : 'd-none'}">
             <img src="${el.image}" alt="image">
             <div class="text absolute">
                 <h3 class="size-20 color-white">${el.title}</h3>
