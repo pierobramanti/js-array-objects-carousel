@@ -22,29 +22,25 @@ const images = [
     }
 ];
 
+const items = document.querySelector(".items");
+const prev = document.querySelector(".btn-top");
+const next = document.querySelector(".btn-bottom");
 
-const items = document.querySelector(".items")
-const item= document.querySelectorAll(".item")
-const prev = document.querySelector(".btn-top")
-const next = document.querySelector(".btn-bottom")
-
-
-// varibile active //
-
+// variabile active //
 let active = 0;
 
-
 // USO IL METODO FOREACH PER CICLARE GLI OGGETTI//
-images.forEach((el)=>{
+images.forEach((el, index) => {
     items.innerHTML += `             
-        <div class="image item relative d-none">
+        <div class="image item relative ${index === 0 ? '' : 'd-none'}">
             <img src="${el.image}" alt="image">
             <div class="text absolute">
                 <h3 class="size-20 color-white">${el.title}</h3>
                 <p class="size-20 color-white">${el.text}</p>
             </div> 
-        <div> `
-})
+        </div> `;
+});
 
-// recupero il primo elemento con la classe image che ha anche la classe d-none per toglierli quest'ultima//
-document.querySelectorAll('.image')[active].classList.remove('d-none');
+// recupero tutti gli elementi con la classe image
+let allImages = document.querySelectorAll('.image');
+
