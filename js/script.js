@@ -41,10 +41,10 @@ images.forEach((el, index) => {
         </div> `;
 });
 
-// recupero tutti gli elementi con la classe image
+// recupero tutti gli elementi con la classe image //
 let allImages = document.querySelectorAll('.image');
 
-// definisco il comportamento del tasto next
+// definisco il comportamento del tasto next //
 next.addEventListener('click', function () {
     allImages[active].classList.add('d-none');
 
@@ -56,3 +56,14 @@ next.addEventListener('click', function () {
     allImages[active].classList.remove('d-none'); 
 });
 
+// definisco il comportamento del tasto prev //
+prev.addEventListener('click', function(){
+    allImages[active].classList.add('d-none');
+
+    active--;
+    if (active < 0) {
+        active = allImages.length - 1;
+    }
+
+    allImages[active].classList.remove('d-none'); 
+});
